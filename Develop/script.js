@@ -29,6 +29,15 @@ if (passwordLength < 8 ||  passwordLength > 128) {
   window.alert ("Must be between 8 and 128 characters! ");
 return;
 }
+passwordUpper = window.confirm("Confirm for Uppercase");
+passwordLower = window.confirm("Confirm for Lowercase");
+passwordNum = window.confirm("Confirm for Numbers");
+passwordSpec = window.confirm("Confirm for Secial characters")
+
+if (passwordUpper === false && passwordLower === false && passwordNum === false && passwordSpec === false){
+  window.alert("Must enter at least one character type.")
+}
+
 return("lifk4ghfef2&*55")
 
 }
