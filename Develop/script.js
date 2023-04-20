@@ -38,7 +38,27 @@ if (passwordUpper === false && passwordLower === false && passwordNum === false 
   window.alert("Must enter at least one character type.")
 }
 
-return("lifk4ghfef2&*55")
+var password = "" ;
+const avaliblecharacters = [];
+
+if(passwordUpper) {
+avaliblecharacters.push(uppercase.split(","));
+}
+if (passwordLower){
+avaliblecharacters.push(lowercase.split(","));
+}
+if (passwordNum){
+  avaliblecharacters.push(number.split(","));
+}
+if (passwordSpec){
+  avaliblecharacters.push(specialcharacter.split(","));
+}
+for (var i=0; i <passwordLength; i++){
+  var randomChar = avaliblecharacters[Math.floor(Math.random() * avaliblecharacters.length)];
+  password += randomChar[Math.floor(Math.random() * randomChar.length)];
+}
+
+return(password)
 
 }
 
